@@ -1,2 +1,3 @@
-# Colors
-Colors for using in Scripts 
+### form of use
+
+> **./colors @blue exemple**
