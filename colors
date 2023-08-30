@@ -1,7 +1,6 @@
 #!/bin/bash
 
 echo "$@" | sed \
-    -e "s/\(\(@\(red\|green\|yellow\|blue\|magenta\|cyan\|white\|reset\|b\|u\)\)\+\)[[]\{2\}\(.*\)[]]\{2\}/\1\4@reset/g" \
     -e "s/@red/$(tput setaf 1)/g" \
     -e "s/@green/$(tput setaf 2)/g" \
     -e "s/@yellow/$(tput setaf 3)/g" \
@@ -9,19 +8,20 @@ echo "$@" | sed \
     -e "s/@magenta/$(tput setaf 5)/g" \
     -e "s/@cyan/$(tput setaf 6)/g" \
     -e "s/@white/$(tput setaf 7)/g" \
-    -e "s/@yellow_light/$(tput setaf 11)/g" \
-    -e "s/@purple/$(tput setaf 13)/g" \
-    -e "s/@orange/$(tput setaf 166)/g" \
-    -e "s/@gray/$(tput setaf 243)/g" \
-    -e "s/@pink/$(tput setaf 205)/g" \
-    -e "s/@brown/$(tput setaf 130)/g" \
-    -e "s/@turquoise/$(tput setaf 45)/g" \
-    -e "s/@lavender/$(tput setaf 183)/g" \
-    -e "s/@lime/$(tput setaf 190)/g" \
-    -e "s/@teal/$(tput setaf 30)/g" \
-    -e "s/@olive/$(tput setaf 64)/g" \
-    -e "s/@maroon/$(tput setaf 88)/g" \
-    -e "s/@navy/$(tput setaf 18)/g" \
+    -e "s/@red_dark/$(tput setaf 88)/g" \
+    -e "s/@green_dark/$(tput setaf 22)/g" \
+    -e "s/@yellow_dark/$(tput setaf 58)/g" \
+    -e "s/@blue_dark/$(tput setaf 19)/g" \
+    -e "s/@magenta_dark/$(tput setaf 90)/g" \
+    -e "s/@cyan_dark/$(tput setaf 23)/g" \
+    -e "s/@white_dark/$(tput setaf 234)/g" \
+    -e "s/@red_strong/$(tput setaf 9)/g" \
+    -e "s/@green_strong/$(tput setaf 10)/g" \
+    -e "s/@yellow_strong/$(tput setaf 11)/g" \
+    -e "s/@blue_strong/$(tput setaf 12)/g" \
+    -e "s/@magenta_strong/$(tput setaf 13)/g" \
+    -e "s/@cyan_strong/$(tput setaf 14)/g" \
+    -e "s/@white_strong/$(tput setaf 15)/g" \
     -e "s/@reset/$(tput sgr0)/g" \
     -e "s/@b/$(tput bold)/g" \
     -e "s/@u/$(tput sgr 0 1)/g"
